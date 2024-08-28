@@ -6,6 +6,12 @@ import CatScreen from './screens/CatScreen';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import SettingsScreen from './screens/SettingsScreen';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import LoginScreen from './screens/Login';
+import GPSComponent from './components/GPSComponent';
+import GPSandMapComponent from './components/GPSandMapComponent';
+import GesturesComponent from './components/GesturesComponent';
+import CameraComponent from './components/CameraComponent';
+import HomeScreen from './screens/HomeScreen';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -14,8 +20,18 @@ const Tab = createBottomTabNavigator();
 function StackNavigator() {
   return (
      <Stack.Navigator>
+
+        {/* Vis HomeScreen for at se kamera eksemplet */}
         <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }}/>
-        <Stack.Screen name="Cat" component={CatScreen} />
+
+        {/* Vis GPSandMapComponent for at se maps eksemplet */}
+        {/* <Stack.Screen name="Home" component={GPSandMapComponent} options={{ headerShown: false }}/> */}
+
+        {/* Vis GesturesComponent for at se gestures eksemplet */}
+        {/* <Stack.Screen name="Home" component={GesturesComponent} options={{ headerShown: false }}/> */}
+
+
+        <Stack.Screen name="Cat" component={CameraComponent} />
       </Stack.Navigator>
   )
 }
