@@ -11,7 +11,7 @@ import GPSComponent from './components/GPSComponent';
 import GPSandMapComponent from './components/GPSandMapComponent';
 import GesturesComponent from './components/GesturesComponent';
 import CameraComponent from './components/CameraComponent';
-import HomeScreen from './screens/HomeScreen';
+
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -22,10 +22,10 @@ function StackNavigator() {
      <Stack.Navigator>
 
         {/* Vis HomeScreen for at se kamera eksemplet */}
-        <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }}/>
+        {/* <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }}/> */}
 
         {/* Vis GPSandMapComponent for at se maps eksemplet */}
-        {/* <Stack.Screen name="Home" component={GPSandMapComponent} options={{ headerShown: false }}/> */}
+        <Stack.Screen name="Home" component={GPSandMapComponent} options={{ headerShown: false }}/>
 
         {/* Vis GesturesComponent for at se gestures eksemplet */}
         {/* <Stack.Screen name="Home" component={GesturesComponent} options={{ headerShown: false }}/> */}
